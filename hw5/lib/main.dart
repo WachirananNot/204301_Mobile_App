@@ -128,39 +128,4 @@ class _MyApp extends State<MyApp> {
   }
 }
 
-class FavoriteWidget extends StatefulWidget {
-  const FavoriteWidget({super.key});
 
-  @override
-  State<StatefulWidget> createState() {
-    return _FavButton();
-  }
-}
-
-class _FavButton extends State<FavoriteWidget> {
-  bool isFavorite = false;
-  int _favoriteCount = 0;
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-            onPressed: () {
-              setState(() {
-                if (isFavorite) {
-                  isFavorite = false;
-                  _favoriteCount -= 1;
-                } else {
-                  isFavorite = true;
-                  _favoriteCount += 1;
-                }
-              });
-            },
-            icon: Icon(
-              isFavorite ? Icons.favorite : Icons.favorite_border,
-              size: 50,
-            ))
-      ],
-    );
-  }
-}
