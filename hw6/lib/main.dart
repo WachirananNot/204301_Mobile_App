@@ -12,7 +12,8 @@ class MyPokemonApp extends StatefulWidget {
 
 void main() {
   runApp(ChangeNotifierProvider(
-    create: (_) => PokemonService(),
+    create: (_) =>
+        PokemonService(), //     <----create pokemon service since the start of the app
     child: const MyPokemonApp(),
   ));
 }
@@ -26,9 +27,10 @@ class _MyPokemonAppState extends State<MyPokemonApp> {
       return MaterialApp(
         title: 'Pokemon Demo',
         theme: ThemeData(
-          primarySwatch: pokemonService.class_ == ""
-              ? Colors.blue
-              : pokemonService.changeTheme(),
+          primarySwatch:
+              pokemonService.class_ == "" //If no Pokemon has been selected yet
+                  ? Colors.blue
+                  : pokemonService.changeTheme(),
         ),
         home: const MyBottomNavigation(),
       );

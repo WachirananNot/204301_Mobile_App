@@ -7,6 +7,7 @@ class PokemonService extends ChangeNotifier {
   late String class_ = "";
   int colorValue = 0;
   
+  //A function for comparing elements as color codes.
   MaterialColor changeTheme() {
     if (class_ == "normal") {
       colorValue = 0xFFA8A77A;
@@ -67,7 +68,8 @@ class PokemonService extends ChangeNotifier {
     }
     notifyListeners();
   }
-
+  
+  //Function for checking element from pokemon ID
   void changeClass(int pokeId) async {
     pokemonInfo = await fetchPokemonInfo(pokeId);
     class_ = pokemonInfo.types[0];

@@ -14,12 +14,13 @@ class _PokemonListState extends State<PokemonList> {
   bool isSelected = false;
   int chosen = 1;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
+    //Decorative methods for adding borders to images.
     BoxDecoration? myBox() {
       if (isSelected) {
         return BoxDecoration(
             border: Border.all(
-          width: 3, //                   <--- border width here
+          width: 3, //                   <--- border width
         ));
       } else {
         return null;
@@ -36,13 +37,14 @@ class _PokemonListState extends State<PokemonList> {
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
                 onTap: () {
+                  //When tapped, it refreshes the page to change colors and add borders.
                   setState(() {
                     isSelected = true;
                     chosen = index + 1;
                     pokemonService.changeClass(index + 1);
                   });
                 },
-                child: (chosen == index + 1
+                child: (chosen == index + 1 //      <----If the selected pokemon id matches the index
                     ? Container(
                         decoration: myBox(),
                         child: Image.network(genPokemonImageUrl(index + 1)),
