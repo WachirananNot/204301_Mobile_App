@@ -11,31 +11,31 @@ class YoutubeList extends StatefulWidget {
 class _YoutubeListState extends State<YoutubeList> {
   var videoList = {
     0: [
-      "https://www.youtube.com/watch?v=pyf8cbqyfPs",
+      "videos/LE SSERAFIM (르세라핌) 'ANTIFRAGILE' OFFICIAL M-V2.mp4",
       "HYBE LABELS",
       "LE SSERAFIM 'ANTIFRAGILE' OFFICIAL M/V",
       "images/ANTIFRAGILE.jpg"
     ],
     1: [
-      "https://www.youtube.com/watch?v=4vbDFu0PUew",
+      "videos/LE SSERAFIM FEARLESS OFFICIAL M-V2.mp4",
       "HYBE LABELS",
       "LE SSERAFIM 'FEARLESS' OFFICIAL M/V",
       "images/FEARLESS.jpg"
     ],
     2: [
-      "https://www.youtube.com/watch?v=sVTy_wmn5SU",
+      "videos/NewJeans (뉴진스) Cookie Official MV2.mp4",
       "HYBE LABELS",
       "NewJeans 'OMG' Official MV (Performance ver.1)",
       "images/omg.jpg"
     ],
     3: [
-      "https://www.youtube.com/watch?v=pSUydWEqKwE",
+      "videos/NewJeans (뉴진스) Ditto Official MV (side A)2.mp4",
       "HYBE LABELS",
       "NewJeans 'Ditto' Official MV (side A)",
       "images/ditto.jpg"
     ],
     4: [
-      "https://www.youtube.com/watch?v=VOmIplFAGeg",
+      "videos/NewJeans (뉴진스) 'OMG' Official MV (Performance ver.1)2.mp4",
       "HYBE LABELS",
       "NewJeans 'Cookie' Official MV",
       "images/Cookie.jpg"
